@@ -86,7 +86,7 @@
     "jest": "^20.0.4",
     "jsdom": "^9.5.0",
     "nock": "^9.0.13",
-    "prettier": "^1.2.2",
+    "prettier": "^1.4.2",
     "prettier-eslint": "^5.1.0",
     "prettier-eslint-cli": "^3.4.1",
     "react-addons-test-utils": "^15.4.1",
@@ -100,8 +100,7 @@
     "webpack-dev-server": "^2.4.5"
   },
   "peerDependencies": {},
-  "optionalDependencies": {
-  },
+  "optionalDependencies": {},
   "scripts": {
     "dev": "webpack-dev-server --env=dev",
     "prod": "cross-env webpack --env=prod",
@@ -110,7 +109,7 @@
     "jest": "NODE_ENV=test NODE_PATH=src/client jest",
     "lint": "eslint **/*.{js,jsx} --quiet",
     "flow": "./node_modules/.bin/flow",
-    "format": "prettier --list-different --single-quote --print-width=120 webpack.config.js \"./src/**/*.{js,jsx}\"",
+    "format": "prettier --single-quote --print-width=120 ./src/**/*.{jsx}",
     "test": "cross-env concurrently \"npm run jest\" \"npm run lint\" \"npm run format\""
   }
 }

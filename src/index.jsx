@@ -5,8 +5,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { AppContainer } from 'react-hot-loader';
+import OfflinePlugin from 'offline-plugin/runtime';
+
 import App from './App';
 
+// $FlowFixMe
 if (process.env.NODE_ENV === 'production') {
   // production setup
   ReactDOM.render(
@@ -17,10 +20,8 @@ if (process.env.NODE_ENV === 'production') {
   );
 
   // service worker
-  require('offline-plugin/runtime').install();
+  OfflinePlugin.install();
 }
-
-const Perf = require('react-addons-perf');
 
 // development setup with HMR
 const render = Component => {
@@ -42,7 +43,3 @@ if (module.hot) {
     render(App);
   });
 }
-
-// after App import
-window.Perf = Perf;
-Perf.start();
