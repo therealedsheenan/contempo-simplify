@@ -27,7 +27,7 @@
     "grunt-contrib-copy": "^1.0.0",
     "html-webpack-plugin": "^2.28.0",
     "inline-manifest-webpack-plugin": "^3.0.1",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.19",
     "offline-plugin": "^4.7.0",
     "progress-bar-webpack-plugin": "^1.9.3",
     "prop-types": "^15.5.8",
